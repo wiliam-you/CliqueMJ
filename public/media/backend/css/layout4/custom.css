@@ -1,0 +1,113 @@
+/* here you can put your own css to customize and override the theme */
+
+/***
+Rounded Portlets
+***/
+/*
+.portlet {
+	border-radius: 4px !important;
+}
+
+.portlet .portlet-title {
+	border-radius: 4px 4px 0px 0px !important;
+}
+
+.portlet .portlet-body,
+.portlet .portlet-body .form-actions  {
+	border-radius: 0px 0px 4px 4px !important;
+}
+*/
+
+#image_preview img{
+    margin:0 15px;
+    border: 1px solid #333;
+    width:210px;
+    height:350px;
+    position:relative;
+    margin-top: 25px;
+}
+
+.remove_btn{
+    position:absolute;
+    right:0;
+    top:0;
+}
+#image_preview .fa{
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top:24px;
+    right:17px;
+    height: 30px;
+    width: 30px;
+    background: red;
+    line-height: 30px;
+    text-align: center;
+}
+
+#image_preview{
+    position:relative;
+}
+.page-container .container{
+    width:100%;
+}
+
+#uploadFile{
+    display: inline-block;
+}
+.mtop{
+    padding-top: 20px;
+}
+.record-table{
+    font-size: 16px;
+}
+.table-heading{
+    text-align:center;
+}
+
+.badge {
+    padding: 1px 9px 2px;
+    font-size: 12.025px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #ffffff;
+    background-color: #999999;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+.badge:hover {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.badge-error {
+    background-color: #b94a48 !important;
+}
+.badge-error:hover {
+    background-color: #953b39;
+}
+.badge-warning {
+    background-color: #f89406 !important;
+}
+.badge-warning:hover {
+    background-color: #c67605;
+}
+.badge-success {
+    background-color: #468847 !important;
+}
+.badge-success:hover {
+    background-color: #356635;
+}
+.badge-info {
+    background-color: #3a87ad !important;
+}
+.badge-info:hover {
+    background-color: #2d6987;
+}
+.badge-inverse {
+    background-color: #333333 !important;
+}
+.badge-inverse:hover {
+    background-color: #1a1a1a;
+}

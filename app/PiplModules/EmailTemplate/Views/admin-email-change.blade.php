@@ -1,0 +1,1 @@
+<p>Hello {{$FIRST_NAME}} {{$LAST_NAME}}, Your email has been changed successfully. Please verify your email by clicking on the link provided belowground {{$VERIFICATION_LINK}} Thanks,&nbsp; {{$SITE_TITLE}}</p>

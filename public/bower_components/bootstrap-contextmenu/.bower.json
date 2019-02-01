@@ -1,0 +1,30 @@
+{
+  "name": "bootstrap-contextmenu",
+  "main": "bootstrap-contextmenu.js",
+  "homepage": "https://github.com/sydcanem/bootstrap-contextmenu",
+  "authors": [
+    "sydcanem <icqhv.santos@gmail.com>"
+  ],
+  "description": "Context-menu extension for the Bootstrap framework",
+  "keywords": [
+    "boostrap",
+    "contextmenu"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "9a325108c1",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9a325108c195072a515f6313b9ce8db42d5dc617"
+  },
+  "_source": "https://github.com/guillermomartinez/bootstrap-contextmenu.git",
+  "_target": "master",
+  "_originalSource": "guillermomartinez/bootstrap-contextmenu"
+}

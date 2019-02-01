@@ -1,0 +1,39 @@
+{
+  "name": "filemanager-ui",
+  "description": "It is the graphical user interface File Manager, regardless of the backend, lets you work with PHP, Python, nodejs or another.",
+  "keywords": [
+    "filemanager",
+    "upload",
+    "file",
+    "document",
+    "management"
+  ],
+  "version": "0.1.5",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "jquery-validation": "~1.13.1",
+    "dropzone": "enyo/dropzone#~4.0.1",
+    "fancybox": "fancyapps/fancybox#~2.1.5",
+    "moment": "~2.9.0",
+    "bootstrap-contextmenu": "guillermomartinez/bootstrap-contextmenu#master"
+  },
+  "homepage": "https://github.com/guillermomartinez/filemanager-ui",
+  "_release": "0.1.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.5",
+    "commit": "eaf276d358372faf1e6a8a00f163ec6f106d97a5"
+  },
+  "_source": "https://github.com/guillermomartinez/filemanager-ui.git",
+  "_target": "^0.1.5",
+  "_originalSource": "filemanager-ui",
+  "_direct": true
+}

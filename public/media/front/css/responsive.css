@@ -1,0 +1,529 @@
+@media screen and (min-width : 1400px) {
+}
+@media screen and (min-width : 1200px) {
+}
+@media screen and (min-width : 992px) and (max-width : 1199px) {
+    .left-content {
+    padding: 100px 10px 40px 0px;
+}
+.mob_bg {
+    left: 38%;
+}
+.copy-right {
+    float: left;
+    width: 35%;
+    }
+.footer-nav {
+    width: 65%;
+   }
+    .block-address li {
+        display: inline-block;
+        margin: 1px;
+        width: 33%;
+    }
+    .f-control input, textarea{
+        width: 100%;
+    }
+
+}
+@media screen and (min-width : 768px) and (max-width : 991px) {
+    header{
+        padding: 15px 20px 30px;
+    }
+    .sticky-header header {
+        padding: 15px 20px;
+    }
+    .logo{
+         width: 20%;
+    }
+    .navigation-bar ul li {
+        margin: 0px 10px;
+    }
+    .navigation-bar{
+        width: 80%;
+        margin-top: 12px;
+        text-align: right;
+    }
+    .typer-text .wrap{
+        font-size: 60px;
+    }
+    .navigation-bar ul li a {
+        font-size: 14px;
+    }
+    .banner-social li{
+      margin: 0px 5px;
+    }
+    .typer-text {
+        padding-top: 250px;
+    }
+    /*.banner {
+       height: 570px;
+    }*/
+    .banner {
+        position: relative;
+        padding: 90px 30px 40px;
+    }
+    .service-info h5 {
+        font-size: 25px;
+    }
+    .hole-tab-content .right-info-sec {
+        padding-left: 20px;
+    }
+    .second_para{
+        display: none;
+    }
+    .center-img{
+        text-align: center;
+    }
+    .left-inner {
+     margin-top: 10px;
+    }
+    .right-inner {
+     margin-top: 10px;
+    }
+
+    .left-content {
+        padding: 70px 15px 10px 0px;
+    }
+    .left-content h1 {
+        margin-top: 10px;
+        font-size: 36px;
+    }
+    .left-content p {
+        margin: 15px 0;
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .banner {
+        position: relative;
+        padding: 130px 30px 40px;
+    }
+    .apple_btn{
+      padding: 12px 16px;
+      margin-right: 10px;
+    }
+    .google_btn{
+      padding: 12px 16px;
+      margin-left: 10px;
+    }
+    .video-bg iframe {
+        position: absolute;
+        height: 340px;
+        width: 202px;
+        top: 60px;
+        left: 10px;
+    }
+    .feature-items {
+        width: 100%;
+    }
+    .feature-items i {
+        margin: 7px 0;
+    }
+    .mob_bg {
+        left: 35%;
+    }
+    .choose-options {
+        margin-top: 15%;
+    }
+    .choose-options .media {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .block-address li {
+        width: 30%;
+    }
+    .f-control input,textarea{
+        width: 97%;
+    }
+
+    .map2-bg img {
+        max-width: 75%;
+    }
+
+    .fatfooter {
+        padding: 0 15px;
+    }
+    .copy-right {
+        width: 34%;
+    }
+    .footer-nav{
+        width: 66%;
+    }
+    .main_login {
+        width: 70%;
+    }
+    .how-it-work video{
+        display: none;
+    }
+    .block-address li {
+        display: inline-block;
+        margin: 1px;
+        width: 33%;
+    }
+    .f-control input, textarea{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width : 767px) {
+    header{
+        padding: 15px 20px 20px;
+    }
+    .mob-menu{
+        position: absolute;
+        top: 20px;
+        right:30px;
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+    }
+    .mob-menu span{
+        position: absolute;
+        height: 2px;
+        width: 25px;
+        background: #fff;
+        top: 50%;
+        transition: all 0.3s linear;
+    }
+    .mob-menu span::after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 30px;
+        background: #fff;
+        top:10px;
+        transition: all 0.3s linear;
+    }
+    .mob-menu span::before{
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 30px;
+        background: #fff;
+        top:-10px;
+        transition: all 0.3s linear;
+    }
+
+    .navigation-bar{
+        width: 50%;
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        right: -100%;
+        top: 84px;
+        transition: all 0.3s linear;
+    }
+    .navigation-bar ul li{
+        visibility: hidden;
+        display: block;
+        text-align: center;
+        margin:15px 10px;
+    }
+    .open_menu .navigation-bar{
+        right: 0;
+        top: 84px;
+    }
+    .open_menu .navigation-bar ul li{
+        visibility: visible;
+    }
+    .open_menu .mob-menu span{
+        width: 0;
+    }
+    .open_menu .mob-menu span::after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .open_menu .mob-menu span::before{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    .typer-text .wrap{
+        font-size: 50px;
+    }
+    .center-img {
+        text-align: center;
+    }
+    .left-inner {
+    margin-top: 20px;
+    }
+    .right-inner {
+    margin-top: 20px;
+    }
+
+    .nav > li{
+         width: 65px;
+    }
+    .horizonal-scroll{
+        min-height: 95px;
+        max-width: 400px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space:nowrap;
+    }
+    .main_login {
+        width: 70%;
+    }
+    .how-it-work video{
+        display: none;
+    }
+
+}
+@media screen and (max-width : 480px) {
+.logo img {
+    width: 120px;
+}
+.navigation-bar {
+    width: 100%;
+    border-top:2px solid #1dc185;
+    border-bottom:2px solid #1dc185;
+}
+
+.banner {
+    position: relative;
+    padding: 15px 10px 30px;
+}
+.left-content {
+    padding: 100px 0px 25px 0px;
+}
+.left-banner-content{
+    width: 100%;
+    text-align: center;
+}
+.right-banner-content{
+    display: none;
+}
+.left-content h1{
+    font-size: 26px;
+    margin-top: 15px
+}
+.left-content p {
+    margin: 20px 14px;
+	font-size: 16px;
+	line-height: 27px;
+	text-align: justify;
+}
+.app-buttons{
+    text-align: center;
+}
+.left-content .apple_btn {
+    padding: 5px 10px;
+    margin-right: 3px;
+    border-radius: 5px;
+}
+.left-content .google_btn {
+    padding: 5px 10px;
+    margin-left: 3px;
+    border-radius: 5px;
+}
+
+.banner-item li{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.how-it-work {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+
+.how-head h3 {
+    font-size: 24px;
+  }
+
+ .how-it{
+    padding: 30px 0px 20px;
+ }
+ .inner-how {
+    padding: 0px 5px;
+}
+
+ .features {
+    padding: 20px 0 35px;
+}
+.video-bg {
+    margin-bottom: 25px;
+    text-align: center;
+}
+.video-bg iframe{
+    left: 16px;
+}
+.available_on .available-inner {
+    width: 90%;
+    padding-top: 30px;
+}
+.available_on {
+    padding: 35px 0;
+}
+.available-inner-buttons .apple_btn {
+    padding: 5px 8px;
+    margin-right: 3px;
+    border-radius: 5px
+}
+.available-inner-buttons .google_btn {
+    padding: 5px 8px;
+    margin-left: 3px;
+    border-radius: 5px;
+}
+.mob_bg {
+    display: none;
+}
+.screen_shots {
+    padding: 40px 0;
+}
+.why-choose-us {
+    padding: 40px 0 0;
+ }
+.choose-options .media {
+    margin-bottom: 40px;
+    width: 100%;
+}
+.faq {
+    padding: 30px 0;
+}
+.faq .accordion {
+    padding: 5px 15px;
+    font-size: 13px;
+  }
+.faq .accordion::after {
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+}
+.faq .panel p {
+    padding: 5px;
+    text-align: justify;
+}
+.contact-us {
+    padding: 30px 0;
+}
+.block-address li {
+    width: 100%;
+ }
+.f-control input, textarea {
+    width: 100%;
+ }
+.submit-btn {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.video-bg iframe {
+    left: 16px;
+}
+.map2-bg iframe {
+    left: 46px;
+}
+.social ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.ftr-link {
+    margin: 0px 0px 0;
+    text-align: center;
+}
+.footer-about-info p {
+    font-size: 15px;
+}
+.social {
+   padding: 20px 0;
+   text-align: center;
+}
+.fatfooter {
+    padding: 0 10px;
+}
+
+.footer-about-info p {
+    text-align: justify;
+}
+.copy-right{
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+.footer-about-info{
+    margin-bottom: 25px;
+}
+.footer-nav {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+ }
+.how-step {
+    padding-top: 25px;
+    text-align: center;
+}
+h2.step-no {
+    font-size: 24px;
+    line-height: 25px;
+}
+h4.step-name {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    padding: 15px 0px 5px;
+    color: #333333;
+}
+.feature-items{
+    min-height: 0;
+    margin-bottom: 20px;
+}
+
+.what-we-do{
+	background: #a3a3a3;
+}
+.inner-icon-sec {
+    margin-bottom: 25px;
+}
+.what-we-do .do-inner .center-heading h1 {
+    font-size: 36px;;
+    letter-spacing: 3px;
+}
+.what-we-do .do-inner .center-heading {
+    width: 100%;
+}
+.inner-icon-sec img {
+    width: 70px;
+}
+.why-choose-us-img img {
+    padding-top: 0px;
+}
+.block-address li {
+    height: auto;
+}
+footer {
+    padding: 20px 0px 0;
+}
+.footer-about-info img {
+    margin-bottom: 20px;
+    width: 120px;
+}
+.social ul li i {
+    width: 35px;
+    height: 35px;
+    line-height: 36px;
+    font-size: 18px;
+}
+.feature-content {
+    margin-top: 20px;
+}
+.feature-items i {
+    margin: 5px 0;
+}
+
+/********** login form ***********/
+.main_login {
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width : 360px) {
+
+.mob_bg {
+    left: 15%;
+    display: block;
+}
+.screen_shots {
+    padding: 40px 0;
+}
+
+}

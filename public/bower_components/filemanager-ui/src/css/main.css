@@ -1,0 +1,507 @@
+.filemanager{
+    color: #000;
+    font-family: arial;
+    font-size: 14px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding-bottom: 15px;
+}
+.filemanager .navbar {
+    background-color: #fff;
+    border: 0 none;
+    margin: 0;
+    padding: 10px 0 0;
+}
+.filemanager .form-control {
+  color: #000;
+  height: 30px;
+  padding: 5px 10px;
+}
+.filemanager .tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.filemanager .tooltip.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.filemanager .tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+.filemanager .tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+.filemanager .tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+.filemanager .tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+.filemanager .tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  border-radius: 4px;
+}
+.filemanager .tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.filemanager .tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.filemanager .tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.filemanager .tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.filemanager .tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000000;
+}
+.filemanager .tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000000;
+}
+.filemanager .tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.filemanager .tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.filemanager .tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.filemanager.fixed-top > .navbar{
+left: 0;
+margin-top: 0;
+padding-top: 10px;
+position: fixed;
+right: 0;
+z-index: 1030;
+top: 0;
+}
+.filemanager.fixed-top > .container-fluid{
+    margin-top: 92px;
+}
+.filemanager .list .item {
+    background-color: #fff;
+    box-shadow: 0 0 1px #666;
+    padding: 0;
+    text-align: center;
+    width: 120px;
+        cursor: pointer;
+        position: relative;
+}
+.filemanager .list .item:hover {
+    box-shadow: 0 0 2px #000;
+}
+.filemanager .list .item.active {
+    box-shadow: 0 0 3px #1085E5;
+}
+.filemanager .list .item .check {
+    display: none;
+}
+.filemanager .list .item:hover .check, .filemanager .list .item.active:hover .check{
+    display: block;
+}
+.filemanager .list .item.active .check{
+    display: block;
+    background-color: #337ab7;
+    opacity: 1;
+}
+.filemanager .list .item.active .check input{
+outline: medium none;   
+}
+.filemanager .list .item img {
+    height: 90px;
+    margin: 0 auto;
+    max-height: 120px;
+    max-width: 120px;
+    width: 120px;
+}
+.filemanager .list .item .image {
+    background-color: #fff;
+    display: block;
+    height: 90px;
+    margin: 0;
+    max-height: 120px;
+    max-width: 120px;
+    padding-top: 0;
+    width: 120px;
+}
+.filemanager .list .item .image .content_icon {
+    display: inline-block;
+    height: 90px;
+    vertical-align: middle;
+    width: 120px;
+}
+.filemanager .list .item .image span {
+    font-size: 80px;
+    line-height: 80px;
+    margin-top: 4px;
+}
+#preview_file {
+    text-align: center;
+}
+#preview_file span {
+    color: #337ab7;
+    font-size: 150px;
+}
+.filemanager .list .item .col {
+    background-color: #efefef;
+    font-size: 13px;
+    line-height: 13px;
+    padding: 10px;
+}
+.filemanager .list .item .col h3{
+font-size: 13px;
+margin: 0;
+overflow: hidden;
+padding: 0;
+text-overflow: ellipsis;
+white-space: nowrap;
+line-height: 15px; 
+}
+.filemanager .list .scroll {
+    /*max-height: 600px;*/
+    min-height: 1px;
+    /*overflow-y: auto;*/
+}
+.filemanager #list {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.filemanager #list li {
+    float: left;
+    padding: 5px;
+}
+.filemanager #content_list.view_detalles li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.filemanager #content_list.view_detalles .item .image {
+background-color: #efefef;
+display: block;
+height: auto;
+left: 35px;
+position: absolute;
+top: 0;
+width: 40px;
+z-index: 1;
+}
+.filemanager #content_list.view_detalles .item img {
+    height: 35px;
+    width: 40px;
+}
+.filemanager #content_list.view_detalles .item {
+    border-bottom: 1px solid #999;
+    box-shadow: none;
+    text-align: left;
+    position: relative;
+    width: 100%;
+
+}
+.filemanager #content_list.view_detalles li:nth-child(2n) .col{
+    background-color: #F4F4F4;
+}
+.filemanager #content_list.view_detalles .back .item .col,.filemanager #content_list.view_detalles .back .item .image{
+    background-color: #d6d6d6;
+}
+.filemanager #content_list.view_detalles li:hover .col,.filemanager #content_list.view_detalles li:hover .image, .filemanager #content_list.view_detalles li.back:hover .item .col, .filemanager #content_list.view_detalles li.back:hover .item .image{
+    background-color: #fff;
+}
+.filemanager #content_list.view_detalles .item .image .content_icon {
+    display: inline-block;
+    height: 35px;
+    vertical-align: middle;
+    width: 40px;
+}
+.filemanager #content_list.view_detalles .item .image span {
+display: block;
+font-size: 22px;
+line-height: 34px;
+margin: 0 auto;
+text-align: center;
+}
+.filemanager #content_list.view_detalles .item .col {
+    
+    padding: 0 10px;
+    text-align: left;    
+}
+.filemanager #content_list.view_detalles .item .actions .open > .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+.filemanager #list .item .type, .filemanager #list .item .size, .filemanager #list .item .date, .filemanager #list .item .actions {
+    display: none;
+}
+.filemanager #content_list.view_detalles .item .type, .filemanager #content_list.view_detalles .item .size, .filemanager #content_list.view_detalles .item .date, .filemanager #content_list.view_detalles .item .actions {
+   display: block;
+line-height: 30px;
+margin-top: 2px;
+position: absolute;
+right: 0;
+top: 0;
+}
+.filemanager #content_list.view_detalles .item .name {
+display: block;
+padding-left: 100px;
+padding-right: 330px;
+position: relative;
+}
+.filemanager #content_list.view_detalles .item .name h3{
+font-size: 14px;
+height: 100%;
+line-height: 35px;
+margin: 0;
+overflow: hidden;
+padding: 0;
+text-overflow: ellipsis;
+white-space: nowrap;
+height: 36px;
+}
+.filemanager #content_list.view_detalles .item .type {
+ right: 250px;
+width: 70px;
+}
+.filemanager #content_list.view_detalles .item .size {
+    right: 160px;
+width: 90px;
+}
+.filemanager #content_list.view_detalles .item .date {
+  right: 70px;
+width: 90px;
+}
+.filemanager #content_list.view_detalles .item .actions {
+    width: 70px;
+}
+.filemanager #content_list.view_detalles .item .check {
+  display: block;
+  height: 35px;
+  left: 0px;
+  position: absolute;
+  width: 35px;
+  background-color: transparent;
+}
+.filemanager #content_list.view_detalles .item.active .check {
+    background-color: #337ab7;
+}
+.filemanager #content_list.view_detalles .item .check label {
+  display: block;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  width: 35px;
+}
+.filemanager #content_list.view_detalles .item .check label input{
+    margin: 11px 10px 10px;
+}
+.filemanager #loading {
+    background-image: url("../images/loading.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    width: 100%;
+}
+.filemanager .btn-toolbar {
+    margin-top: 10px;
+}
+.filemanager .btn-toolbar, .filemanager .breadcrumb {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#actions {
+    margin: 10px 0 0;
+}
+div.table {
+    display: table;
+}
+div.table .file-row {
+    display: table-row;
+}
+div.table .file-row > div {
+    border-top: 1px solid #ddd;
+    display: table-cell;
+    padding: 8px;
+    vertical-align: top;
+}
+div.table .file-row:nth-child(2n+1) {
+    background: #f9f9f9 none repeat scroll 0 0;
+}
+#total-progress {
+    opacity: 0;
+    transition: opacity 0.3s linear 0s;
+}
+#previews .file-row.dz-success .progress {
+    opacity: 0;
+    transition: opacity 0.3s linear 0s;
+}
+#previews .file-row .delete {
+    display: none;
+}
+#previews .file-row.dz-success .start, #previews .file-row.dz-success .cancel {
+    display: none;
+}
+#previews .file-row.dz-success .delete {
+    display: block;
+}
+.col_top_right > div {
+    float: right;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #428bca;
+    color: #fff;
+    text-decoration: none;
+}
+#content_list #row_header_content {
+    display: none;
+}
+#content_list.view_detalles #row_header_content {
+    display: block;
+}
+.view_detalles #row_header_content .row_header {
+    background-color: #DDDDDD;
+    border-bottom: 1px solid #999;
+    display: table;
+    font-family: tahoma;
+    font-size: 13px;
+    margin: 0;
+    width: 100%;
+}
+.view_detalles #row_header_content .col {
+    display: table-cell;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+.view_detalles #row_header_content .name {
+    padding-left: 50px;
+}
+.view_detalles #row_header_content .type {
+    width: 70px;
+}
+.view_detalles #row_header_content .size {
+    width: 90px;
+}
+.view_detalles #row_header_content .date {
+    width: 90px;
+}
+.view_detalles #row_header_content .actions {
+    width: 70px;
+}
+.fancybox-title.fancybox-title-inside-wrap h3{
+    margin: 0;
+    font-size: 16px;
+}
+.fancybox-title.fancybox-title-inside-wrap p{
+    margin: 0;
+}
+.menu_contextual li a{
+    padding-left: 15px;
+}
+.menu_contextual li a:before{
+    font-family: "Glyphicons Halflings";
+    padding: 0 5px;
+}
+.menu_contextual li.view a:before{
+    content: "\e105";
+}
+.menu_contextual li.move a:before{
+    content: "\e068";
+}
+.menu_contextual li.rename a:before{
+    content: "\e065";
+}
+.menu_contextual li.download a:before{
+    content: "\e025";
+}
+.menu_contextual li.delete a:before{
+    content: "\e014";
+}
+.col_top_right > .btn-group{
+    width: 220px;
+}
+.col_top_right > .btn-group > .grupo1{
+    width: 181px;
+}
+.col_top_right > .btn-group > .grupo2{
+    width: 40px;
+}
+.check{
+    width: 30px; height: 30px; position: absolute; top: 0px; right: 0px; background-color: rgb(102, 102, 102); opacity: 0.6;
+    z-index: 10;
+}
+.check label{
+    display: block;
+height: 30px;
+margin: 0;
+padding: 0;
+width: 30px;
+text-align: center;
+}
+.check label input{
+    margin: 8px 8px 8px 9px;
+    display: inline-block;
+}
+.filemanager .navbar .btn-sm, .btn-group-sm > .btn {
+  margin: 0 2px;
+}
+.filemanager .modal-body #actions .btn{
+    margin: 0 2px;
+}
+.filemanager .filename_delete > span{
+    margin-left: 3px;
+}
+.filemanager .filename_delete > span > span{
+    margin-right: 5px;
+}

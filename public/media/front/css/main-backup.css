@@ -1,0 +1,482 @@
+body {
+ font-family:arial;
+ position: relative; 
+}
+header {
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	transition: all 300ms linear 0s;
+	-o-transition: all 300ms linear 0s;
+	-moz-transition: all 300ms linear 0s;
+	-webkit-transition: all 300ms linear 0s;
+
+}
+.sticky-header header {
+	background: #000;
+}
+.sticky-header header .navigation_bar {
+	background: #000;
+	margin-top: 0;
+}
+
+.logo{
+	float:left;
+	padding-bottom:15px;
+}
+.navigation_bar{
+	padding:15px;
+}
+.right_nav{
+	float:right;
+	margin-top:30px;
+}
+.right_nav a{
+	color:#fff;
+	padding: 7px 15px;
+	text-decoration:none;
+	font-size: 14px;
+	border-radius:0 5px 0 5px;
+	transition: all 0.3s linear;
+}
+.right_nav a:hover{
+	background: #1dc185;
+}
+.clearfix{
+	clear:both;
+}
+/*************** banner *****************/
+.banner{
+	padding-top:100px;
+	padding-bottom: 40px;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background-position: center center !important;
+}
+.screen{
+	padding:25px 0px;
+}
+.cover_code{
+	width:25%;
+	float:left;
+}
+.advertize{
+	width:50%;
+	float:left;
+	margin-top:60px;
+}
+.mob_adv{
+	width:25%;
+	float:right;
+}
+.advertize h3{
+	font-size:37px;
+	color:#fff;
+	text-align:center;
+}
+.advertize p{
+	font-size:20px;
+	color:#fff;
+	text-align:center;
+}
+/*.b_active{
+	background:#1dc185!important;
+	color:#333!important;
+}*/
+.advertize button{
+	background:none;
+	border: 1px solid #1dc185;
+	color:#1dc185;
+	padding: 5px 25px;
+	border-radius:25px;
+	margin:0px 15px;
+	transition: all 0.4s linear;
+}
+.adv_btns{
+	text-align: center;
+	margin-top:100px;
+}
+.adv_btns button:hover{
+	background:#1dc185;
+	color:#333;
+}
+.banner{
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+/*************** dispaensary *****************/
+.dispensary{
+	background:#fff;
+	padding: 80px 0px 70px;
+}
+.dispensary_heading{
+	text-align:center;
+	color:#1cc184;
+	margin-bottom:50px;
+}
+.dispensary_p{
+	margin:0px 50px;
+}
+.kart{
+	background: #76f6c5;
+	text-align:center;
+	padding:40px 45px 50px;
+	box-shadow: 0px 4px 8px 4px rgb( 0, 0, 0, 0.2 );
+	position: relative;
+}
+.active_cart{
+	background:#50efb2;
+}
+.active_cart::before{
+	border-top: 40px solid #50efb2!important;
+}
+
+.kart h4{
+	margin:25px 0px 25px;
+}
+
+.kart::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 20px;
+    z-index: 0;
+    border-top: 40px solid #76f6c5;
+    border-bottom: 10px solid transparent;
+    border-right: 415px solid transparent;
+    bottom: -50px;
+}
+
+/*************** adertize *****************/
+.adertize{
+	background:#ededed;
+	padding: 80px 0px 70px;
+}
+.adertize_product{
+	padding:0px 50px;
+}
+.advertize_heading{
+	text-align:center;
+	color:#1cc184;
+	margin-bottom:50px;
+}
+.product_bg{
+	background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+.product{
+	text-align:center;
+	padding:40px 15px;
+	color:#fff;
+}
+.product img{
+	width:134px;
+	height:152px;
+}
+.product h3{
+	margin:20px 0px 25px;
+}
+/*************** screen shots *****************/
+.screen_shot{
+	background:#fff;
+	padding: 80px 0px 90px;
+	position: relative;
+}
+.mob_bg{
+	position: absolute;
+	top:155px;
+	left:41.5%;
+}
+.screen_heading{
+	text-align:center;
+	color:#1cc184;
+}
+.screen_heading h2{
+	margin-bottom: 80px;
+}
+.screen_shot .owl-dots {
+	display:none !important;
+}
+.screen_shot .item img{
+	width:201px;
+	height:350px;
+}
+.screen_shot .item{
+	text-align:center;
+}
+.screen_shot .owl-nav .owl-prev{
+	float:left;
+	left:-15px;
+	top: 40%;
+	position: absolute;
+	background: #18a16f !important;
+	padding:4px 10px !important;
+	border-radius: 0px!important;
+}
+.screen_shot .owl-nav .owl-next{
+	float:right;
+	right:-15px;
+	top: 40%;
+	position: absolute;
+	background: #18a16f !important;
+	padding:4px 10px !important;
+	border-radius: 0px!important;
+}
+
+
+/*************** get_started *****************/
+.get_started{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	padding: 80px 0px 60px;
+}
+.get_heading{
+	text-align:center;
+	color:#1cc184;
+}
+.get_heading h2{
+	margin-bottom: 50px;
+}
+.started h3{
+	color:#1cc184;
+}
+.started{
+	background:#ffffff;
+	text-align:center;
+	padding:20px 35px 30px;
+	margin:0px 40px;
+}
+.started button{
+	background:#50efb2;
+	color:#333;
+	border:none;
+	padding:5px 30px;
+	border-radius:25px;
+	margin:25px 0px 15px;
+	border:1px solid #50efb2;
+	transition: all 0.3s linear;
+}
+.started button:hover{
+	background:#fff;
+	border:1px solid #50efb2;
+}
+/*************** footer *****************/
+
+footer{
+	background: #50efb2;
+	padding: 30px 0px 15px;
+}
+footer ul{
+	list-style: none;
+}
+footer ul li{
+	display: inline-block;
+	margin:0 20px;
+	height:35px;
+	width:35px;
+	line-height:35px;
+	text-align:center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+	transform:rotate(45deg);
+	transition: all 0.3s linear;
+}
+footer ul li:hover{
+	background:orange;
+	transform:rotate(360deg);
+	border-radius:50%;
+}
+footer ul li:hover .fa{
+	color: #fff;
+	transform:rotate(0deg);
+}
+footer ul li .fa{
+	transform:rotate(-45deg);
+	font-size:18px;
+	color:#333;
+	line-height: 35px;
+}
+.clique{
+	color:#333;
+}
+.social p{
+	color:#fff;
+	margin-left:50px;
+	margin-top:30px;
+	font-size:17px;
+}
+.address p{
+	color:#fff;
+}
+
+
+/*********** login form ***********/
+.login_form{
+	padding-top:150px;
+}
+.main_login{
+	width:50%;
+	margin:auto;
+	padding:15px 30px 30px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+	border:1px solid #ddd;
+	margin-top:40px;
+	margin-bottom:60px;
+}
+.login_heading{
+	text-align: center;
+	color:#333;
+}
+.login_heading h2{
+	border-bottom:3px solid #50efb2;
+	display:inline-block;
+	font-size:30px;
+	padding-bottom:5px;
+}
+.login_form button{
+	text-align:center;
+	background:#50efb2;
+	color:#fff;
+	font-size:16px;
+	padding:5px 30px;
+	height:40px;
+	border:1px solid transparent;
+	transition: all 0.2s linear;
+}
+.login_form button:hover{
+	background:#fff;
+	color:#333;
+	border:1px solid #50efb2;
+}
+.login_form .form-control {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #50efb2;
+    border-radius: 0px;
+    box-shadow:none;
+}
+.login_form label{
+	font-size:16px;
+}
+.chkbx{
+	float:left;
+}
+.sbmt_btn{
+	float:right;
+	margin-top:10px;
+}
+.forgot_pwd{
+	display:inline-block;
+}
+/*********** register form ***********/
+.register_form{
+	padding-top:150px;
+}
+.main_register{
+	width:50%;
+	margin:auto;
+	padding:15px 30px 30px;
+	/*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);*/
+	border:1px solid #ddd;
+	margin-bottom:40px;
+}
+.register_heading{
+	text-align: center;
+	color:#333;
+}
+.register_heading h2{
+	border-bottom:3px solid #50efb2;
+	display:inline-block;
+	font-size:30px;
+	padding-bottom:5px;
+}
+.register_form button{
+	text-align:center;
+	background:#50efb2;
+	color:#fff;
+	font-size:16px;
+	padding:5px 30px;
+	height:40px;
+	border:1px solid transparent;
+	transition: all 0.3s linear;
+}
+.register_form button:hover{
+	background:#fff;
+	color:#333;
+	border:1px solid #50efb2;
+}
+.register_form .form-control {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #50efb2;
+    border-radius: 0px;
+    box-shadow:none;
+}
+.register_form label{
+	font-size:16px;
+}
+.chkbx{
+	float:left;
+}
+.sbmt_btn{
+	float:right;
+	margin-top:10px;
+}
+.cancel_btn{
+	background:#f44336!important;
+	border: 1px solid transparent!important;
+}
+.cancel_btn:hover{
+	background:#fff!important;
+	border: 1px solid #f44336!important;
+}
+.form_pages .navigation_bar {
+    background: none!important;
+ }
+/****************** privacy & Policy ************************/
+.Privacy-sec{
+	padding: 150px 0 50px;
+}
+.common-heading{
+	color: #333;
+}
+.common-heading h2{
+	position: relative;
+	display: inline-block;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	font-size: 28px;
+}
+.common-heading h2::after{
+	content:'';
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	background: #50efb2;
+	bottom: -7px;
+	left: 0;
+}
+/****************** Terms & Condition ************************/
+.terms-sec{
+	padding: 150px 0 50px;
+}
+/****************** about ************************/
+.about-sec{
+	padding: 150px 0 50px;
+}
