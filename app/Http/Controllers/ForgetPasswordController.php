@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\PiplModules\webservice\Models\ForgetPassword;
 use Carbon\Carbon;
+use App\User;
 
 class ForgetPasswordController extends Controller
 {
