@@ -342,13 +342,13 @@ class WebServiceController extends Controller {
 
             $arr_keyword_values['FIRST_NAME'] = $user->userInformation->first_name;
             $arr_keyword_values['LAST_NAME'] = $user->userInformation->last_name;
-            $arr_keyword_values['PASSWORD'] = url("forget_password/reset?md5=" . $forgetPassword->md5);
+            $arr_keyword_values['RESET_LINK'] = url("forget_password/reset?md5=" . $forgetPassword->md5);
             $arr_keyword_values['SITE_TITLE'] = $site_title;
             // // updating password
             //$user->password = $new_password;
             $user->save();
 
-            $email_template = EmailTemplate::where("template_key", 'resend-password')->first();
+            $email_template = EmailTemplate::where("template_key", 'request-reset-password')->first();
             Mail::send('EmailTemplate::resend-password', $arr_keyword_values, function ($message) use ($user, $email_template, $site_email, $site_title) {
                 $message->to($user->email, $user->userInformation->first_name)->subject($email_template->subject)->from($site_email, $site_title);
             });

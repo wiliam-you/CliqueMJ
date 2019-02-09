@@ -8,6 +8,7 @@ use Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Password;
 use App\PiplModules\EmailTemplate\Models\EmailTemplate;
+use App\PiplModules\webservice\Models\ForgetPassword;
 use Illuminate\Contracts\Auth\PasswordBroker as PasswordBrokerContract;
 use Mail;
 use GlobalValues;
@@ -126,9 +127,14 @@ trait ResetsPasswords
                 $arr_keyword_values['LAST_NAME'] = $user->userinformation->last_name;
                 $arr_keyword_values['EMAIL'] = $user->email;
                 $arr_keyword_values['PASSWORD'] = $random_password;
-                $email_template = EmailTemplate::where("template_key",'send-password')->first();
-                $user->password = $random_password;
-                $user->save();
+                $forgetPassword = new ForgetPassword;
+                $forgetPassword->user_id = $user->id;
+                //$forgetPassword->created_at = time();
+                $forgetPassword->md5 = str_random(32);
+                $forgetPassword->save();
+
+                $arr_keyword_values['RESET_LINK'] = url("forget_password/reset?md5=" . $forgetPassword->md5);
+                $email_template = EmailTemplate::where("template_key",$this->email_template_key)->first();
             }
             $arr_keyword_values['SITE_TITLE'] =  $site_title;
 
