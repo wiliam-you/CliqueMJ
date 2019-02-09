@@ -30,7 +30,7 @@ class ForgetPasswordController extends Controller
         $str = $request->get("md5");
         if ($str != "") {
             $expire_time = Carbon::createFromTimestamp(time() - 60 * 60 * 72);
-            $forgetPassword = ForgetPassword::where("md5", $str)->andWhere("created_at", ">", $expire_time)->get()->first();
+            $forgetPassword = ForgetPassword::where("md5", $str)->where("created_at", ">", $expire_time)->get()->first();
             if ($forgetPassword) {
                 return view("auth.passwords.forget_reset", compact("forgetPassword"));
             }
