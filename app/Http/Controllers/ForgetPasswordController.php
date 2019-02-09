@@ -48,7 +48,8 @@ class ForgetPasswordController extends Controller
             'password' => 'required|min:6|confirmed',
             'md5' => 'required|min:32',
         ]);
-        $forgetPassword = ForgetPassword::where("md5", $str)->where("created_at", ">", $expire_time)->get()->first();
+        $expire_time = Carbon::createFromTimestamp(time() - 60 * 60 * 72);
+        $forgetPassword = ForgetPassword::where("md5", $request->get('md5'))->where("created_at", ">", $expire_time)->get()->first();
         if ($forgetPassword) {
             $user = User::find($forgetPassword->user_id);
             $user->password = bcrypt($request->get('password'));
