@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\PiplModules\ResetsPasswords;
 use Illuminate\Http\Request;
 use App\PiplModules\webservice\Models\ForgetPassword;
 
