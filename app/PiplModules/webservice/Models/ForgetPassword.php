@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\PiplModules\webservice\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
