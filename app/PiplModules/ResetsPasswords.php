@@ -120,13 +120,16 @@ trait ResetsPasswords
 
             if($user->userinformation->user_type=='1')
             {
+                $arr_keyword_values['FIRST_NAME'] = "Administrator";
+                $arr_keyword_values['LAST_NAME'] = "";
+                $arr_keyword_values['EMAIL'] = $user->email;
                 $arr_keyword_values['RESET_LINK'] = url('admin/password/reset', $random_password).'?email='.urlencode($user->getEmailForPasswordReset());
                 $email_template = EmailTemplate::where("template_key",$this->email_template_key)->first();
             }else{
                 $arr_keyword_values['FIRST_NAME'] = $user->userinformation->first_name;
                 $arr_keyword_values['LAST_NAME'] = $user->userinformation->last_name;
                 $arr_keyword_values['EMAIL'] = $user->email;
-                $arr_keyword_values['PASSWORD'] = $random_password;
+                //$arr_keyword_values['PASSWORD'] = $random_password;
                 $forgetPassword = new ForgetPassword;
                 $forgetPassword->user_id = $user->id;
                 //$forgetPassword->created_at = time();
