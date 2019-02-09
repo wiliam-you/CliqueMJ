@@ -19,7 +19,7 @@ use App\PiplModules\webservice\Models\PatientAdvertisementOffer;
 use App\PiplModules\webservice\Models\PatientRecord;
 use App\PiplModules\webservice\Models\PatientSharedOffer;
 use App\PiplModules\webservice\Models\Testimonial;
-use App\PiplModules\webservice\Models\forgetPassword;
+use App\PiplModules\webservice\Models\ForgetPassword;
 use App\PiplModules\zone\Models\Cluster;
 use App\PiplModules\genericmessages\Models\GenericMessage;
 use App\User;
@@ -334,7 +334,7 @@ class WebServiceController extends Controller {
             $site_email = $site_email->value;
             // Assign values to all macros
 
-            $forgetPassword = new forgetPassword;
+            $forgetPassword = new ForgetPassword;
             $forgetPassword->user_id = $user->id;
             $forgetPassword->create_at = time();
             $forgetPassword->md5 = str_random(32);
