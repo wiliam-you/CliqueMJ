@@ -27,6 +27,10 @@ class ForgetPasswordController extends Controller
 
     public function forgetPasswordReset(Request $request)
     {
+        $this->validate($request, [           
+            'md5' => 'required|min:32',
+        ]);
+
         $str = $request->get("md5");
         if ($str != "") {
             $expire_time = Carbon::createFromTimestamp(time() - 60 * 60 * 72);
@@ -34,6 +38,20 @@ class ForgetPasswordController extends Controller
             if ($forgetPassword) {
                 return view("auth.passwords.forget_reset", compact("forgetPassword"));
             }
+        }
+        return view("auth.passwords.invalid_reset");
+    }
+
+    public function storeForgetPassword(Request $request)
+    {
+        $this->validate($request, [           
+            'password' => 'required|min:6|confirmed',
+            'md5' => 'required|min:32',
+        ]);
+        $forgetPassword = ForgetPassword::where("md5", $str)->where("created_at", ">", $expire_time)->get()->first();
+        if ($forgetPassword) {
+            ForgetPassword::where("md5", $request->get('md5'))->delete();
+            return view("auth.passwords.reset_success");
         }
         return view("auth.passwords.invalid_reset");
     }

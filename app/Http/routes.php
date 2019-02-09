@@ -57,4 +57,4 @@ Route::get('pi/image-gallery', "ExampleController@loadGallery");
 Route::get('pi/file-explorer', "ExampleController@fileExplorerView");
 Route::post('send/enquiry/email', "HomeController@sendEmail");
 Route::get('forget_password/reset', "ForgetPasswordController@forgetPasswordReset");
-
+Route::post('forget_password/reset', "ForgetPasswordController@storeForgetPassword");
