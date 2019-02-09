@@ -56,5 +56,5 @@ Route::post('pi/crop-example', "ProfileController@cropPostImage");
 Route::get('pi/image-gallery', "ExampleController@loadGallery");
 Route::get('pi/file-explorer', "ExampleController@fileExplorerView");
 Route::post('send/enquiry/email', "HomeController@sendEmail");
-Route::get('forget_password/reset', "PasswordController@forgetPasswordReset");
+Route::get('forget_password/reset', "ForgetPasswordController@forgetPasswordReset");
 
