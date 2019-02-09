@@ -342,7 +342,7 @@ class WebServiceController extends Controller {
 
             $arr_keyword_values['FIRST_NAME'] = $user->userInformation->first_name;
             $arr_keyword_values['LAST_NAME'] = $user->userInformation->last_name;
-            $arr_keyword_values['PASSWORD'] = url("password/reset");
+            $arr_keyword_values['PASSWORD'] = url("forget_password/reset?md5=" + $forgetPassword->md5);
             $arr_keyword_values['SITE_TITLE'] = $site_title;
             // // updating password
             //$user->password = $new_password;
