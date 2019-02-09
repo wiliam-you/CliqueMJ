@@ -150,7 +150,7 @@ trait ResetsPasswords
             }
             else
             {
-                return redirect('/login')->with('success','Your new passsword send to your email');
+                return redirect('/login')->with('success','Reset Link is sent to your email');
             }
 
 
