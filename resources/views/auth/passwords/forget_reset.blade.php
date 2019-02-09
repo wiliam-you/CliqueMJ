@@ -11,7 +11,7 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/forget_password/reset') }}">
                         {!! csrf_field() !!}
 
-                        <input type="hidden" name="token" value="{{ $forgetPassword->md5 }}">
+                        <input type="hidden" name="md5" value="{{ $forgetPassword->md5 }}">
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Password</label>

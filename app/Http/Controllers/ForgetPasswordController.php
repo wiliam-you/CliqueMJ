@@ -50,6 +50,9 @@ class ForgetPasswordController extends Controller
         ]);
         $forgetPassword = ForgetPassword::where("md5", $str)->where("created_at", ">", $expire_time)->get()->first();
         if ($forgetPassword) {
+            $user = User::find($forgetPassword->user_id);
+            $user->password = bcrypt($request->get('password'));
+            $user->save();
             ForgetPassword::where("md5", $request->get('md5'))->delete();
             return view("auth.passwords.reset_success");
         }
