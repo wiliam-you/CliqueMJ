@@ -8,7 +8,7 @@
                 <div class="panel-heading">Reset Password</div>
 
                 <div class="panel-body">
-                   <p>Success</p>
+                   <p>Success <a href="/login">login</a></p>
                 </div>
             </div>
         </div>
