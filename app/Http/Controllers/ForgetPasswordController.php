@@ -14,8 +14,6 @@ class ForgetPasswordController extends Controller
      *
      * @return void
      */
-     
-    use ResetsPasswords;
     
     protected $subject = "";
          
