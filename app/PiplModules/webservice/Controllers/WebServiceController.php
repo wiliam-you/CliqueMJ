@@ -336,7 +336,7 @@ class WebServiceController extends Controller {
 
             $forgetPassword = new ForgetPassword;
             $forgetPassword->user_id = $user->id;
-            $forgetPassword->create_at = time();
+            $forgetPassword->created_at = time();
             $forgetPassword->md5 = str_random(32);
             $forgetPassword->save();
 
