@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\PiplModules\webservice\Models\ForgetPassword;
+use Carbon\Carbon;
 
 class ForgetPasswordController extends Controller
 {
@@ -28,8 +29,9 @@ class ForgetPasswordController extends Controller
     {
         $str = $request->get("md5");
         if ($str != "") {
-            $forgetPassword = ForgetPassword::where("md5", $str)->get()->first();
-            if ($forgetPassword && $forgetPassword->created_at + 72 * 60 * 60 < time()) {
+            $expire_time = Carbon::createFromTimestamp(time() - 60 * 60 * 72);
+            $forgetPassword = ForgetPassword::where("md5", $str)->andWhere("created_at", ">", $expire_time)->get()->first();
+            if ($forgetPassword) {
                 return view("auth.passwords.forget_reset", compact("forgetPassword"));
             }
         }
