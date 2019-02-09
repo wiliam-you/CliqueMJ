@@ -19,6 +19,7 @@ use App\PiplModules\webservice\Models\PatientAdvertisementOffer;
 use App\PiplModules\webservice\Models\PatientRecord;
 use App\PiplModules\webservice\Models\PatientSharedOffer;
 use App\PiplModules\webservice\Models\Testimonial;
+use App\PiplModules\webservice\Models\forgetPassword;
 use App\PiplModules\zone\Models\Cluster;
 use App\PiplModules\genericmessages\Models\GenericMessage;
 use App\User;
