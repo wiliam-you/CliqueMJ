@@ -138,7 +138,7 @@ trait ResetsPasswords
             }
             $arr_keyword_values['SITE_TITLE'] =  $site_title;
 
-            Mail::send('EmailTemplate::send-password',$arr_keyword_values, function ($message) use ($user,$email_template,$site_email,$site_title)  {
+            Mail::send('EmailTemplate::request-reset-password',$arr_keyword_values, function ($message) use ($user,$email_template,$site_email,$site_title)  {
 
                 $message->to( $user->email, $user->name )->subject($email_template -> subject)->from($site_email,$site_title);
 

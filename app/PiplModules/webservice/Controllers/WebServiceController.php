@@ -349,7 +349,7 @@ class WebServiceController extends Controller {
             $user->save();
 
             $email_template = EmailTemplate::where("template_key", 'request-reset-password')->first();
-            Mail::send('EmailTemplate::resend-password', $arr_keyword_values, function ($message) use ($user, $email_template, $site_email, $site_title) {
+            Mail::send('EmailTemplate::request-reset-password', $arr_keyword_values, function ($message) use ($user, $email_template, $site_email, $site_title) {
                 $message->to($user->email, $user->userInformation->first_name)->subject($email_template->subject)->from($site_email, $site_title);
             });
             return json_encode(['error_code' => '0', 'msg' => 'Please check your email to reset your password']);
