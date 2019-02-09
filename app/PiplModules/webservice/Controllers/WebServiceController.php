@@ -326,25 +326,32 @@ class WebServiceController extends Controller {
 
         if ($user != '') {
             $arr_keyword_values = array();
-            $new_password = time();
+            //$new_password = time();
             $site_title = GlobalSetting::where('slug', 'site-title')->first();
             $site_title = $site_title->value;
             $site_email = GlobalSetting::where('slug', 'site-email')->first();
             $site_email = $site_email->value;
             // Assign values to all macros
+
+            $forgetPassword = new forgetPassword;
+            $forgetPassword->user_id = $user->id;
+            $forgetPassword->create_at = time();
+            $forgetPassword->md5 = str_random(32);
+            $forgetPassword->save();
+
             $arr_keyword_values['FIRST_NAME'] = $user->userInformation->first_name;
             $arr_keyword_values['LAST_NAME'] = $user->userInformation->last_name;
-            $arr_keyword_values['PASSWORD'] = $new_password;
+            $arr_keyword_values['PASSWORD'] = url("password/reset");
             $arr_keyword_values['SITE_TITLE'] = $site_title;
             // // updating password
-            $user->password = $new_password;
+            //$user->password = $new_password;
             $user->save();
 
             $email_template = EmailTemplate::where("template_key", 'resend-password')->first();
             Mail::send('EmailTemplate::resend-password', $arr_keyword_values, function ($message) use ($user, $email_template, $site_email, $site_title) {
                 $message->to($user->email, $user->userInformation->first_name)->subject($email_template->subject)->from($site_email, $site_title);
             });
-            return json_encode(['error_code' => '0', 'msg' => 'Password changed successfully and new password has been sent on your registered email']);
+            return json_encode(['error_code' => '0', 'msg' => 'Please check your email to reset your password']);
         } else {
             return json_encode(['error_code' => '1', 'msg' => 'Email not registered yet']);
         }
